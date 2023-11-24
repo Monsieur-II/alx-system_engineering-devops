@@ -4,9 +4,7 @@
 file="school"
 
 #check if file exists or not
-if [ ! -e $file ]; then
-	echo "school file does not exist"
-else
+if [ -e $file ]; then
 	echo "school file exists"
 
 	#check if file is empty or not
@@ -18,6 +16,9 @@ else
 
 	#check if file is a directory or not
 	if [ -f $file ]; then
-		echo "school file is a regular file"
+		echo "school is a regular file"
 	fi
+
+else
+	echo "school file does not exist"
 fi
