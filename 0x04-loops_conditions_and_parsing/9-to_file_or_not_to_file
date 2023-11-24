@@ -6,14 +6,9 @@ file="school"
 #check if file exists or not
 if [ ! -e $file ]; then
 	echo "school file does not exist"
-	status=0
 else
 	echo "school file exists"
-	status=1
-fi
 
-#run this if file exitst
-if [ "$status" -eq 1 ]; then
 	#check if file is empty or not
 	if [ ! -s $file ]; then
 		echo "school file is empty"
