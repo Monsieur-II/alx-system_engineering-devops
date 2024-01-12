@@ -2,3 +2,5 @@
 # This script listens on port 98 on localhost.
 
 nc -l localhost 98
+
+# use: nc localhost 98 to connect to the port 98 on localhost
