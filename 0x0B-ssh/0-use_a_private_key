@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script that creates an RSA key pair.
+
+ssh -i ~/.ssh/school ubuntu@35.175.63.220
