@@ -1,2 +1,3 @@
 # System Engineering Devops
-This is a repo of the shell project.
+
+* This repo covers the essentials of Devops
