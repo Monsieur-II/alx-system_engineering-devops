@@ -12,12 +12,12 @@ def number_of_subscribers(subreddit):
     '''
     user = {'User-Agent': 'linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)'}
     response = requests.get('https://www.reddit.com/r/{}/about.json'
-                       .format(subreddit), headers=user).json()
+                            .format(subreddit), headers=user).json()
     try:
-        return response.get('data').get('subscribers')
+        return response['data']['subscribers']
     except Exception:
         return 0
 
 
 if __name__ == "__main__":
-    number_of_subscribers(argv[1])
+    print(number_of_subscribers(argv[1]))
