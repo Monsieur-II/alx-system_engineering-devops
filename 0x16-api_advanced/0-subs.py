@@ -10,11 +10,11 @@ def number_of_subscribers(subreddit):
     '''
         returns the number of subscribers for a given subreddit
     '''
-    user = {'User-Agent': 'Lizzie'}
-    url = requests.get('https://www.reddit.com/r/{}/about.json'
+    user = {'User-Agent': 'linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)'}
+    response = requests.get('https://www.reddit.com/r/{}/about.json'
                        .format(subreddit), headers=user).json()
     try:
-        return url.get('data').get('subscribers')
+        return response.get('data').get('subscribers')
     except Exception:
         return 0
 
